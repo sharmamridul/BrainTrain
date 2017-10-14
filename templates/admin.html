@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-    <title>Kukreti &middot; Manage Depression </title>
+    <title> {{ user.username }} &middot; Manage Health </title>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
     <title>Simplex</title>
-    <link rel="stylesheet" href="css/admin.css">
-    <script src="jquery.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+    <script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
 </head>
 
 <body>
@@ -17,9 +17,9 @@
         <div class="user_img">
         </div>
         <div class="user_stat_base">
-            <p class="name">Pappu Master <span class="status"></span></p>
+            <p class="name">{{ user.name }} <span class="status"></span></p>
             <p class="detail">
-                35 year old, male
+                {{ user.age|round|int }} years old, {{ user.gender }}
             </p>
         </div>
         <div class="main_nav">
@@ -28,7 +28,7 @@
                 <li><a href="#0">Medical Treatment</a></li>
                 <li><a href="#0">Recent Appointments</a></li>
                 <li><a href="#0">Reports</a></li>
-                <li><a href="#0">Advanced</a></li>
+                <li><a href="{{ url_for('logout') }}">Logout</a></li>
             </ul>
         </div>
         <hr>
@@ -43,7 +43,7 @@
     </nav>
     <div class="main_dash">
         <div class="greet">
-            <h1>Hey there, Pappu</h1>
+            <h1>Hey there, {{ user.name }}</h1>
             <p class="lead">
                 Your recent report, <span class="recent">#PP_LMAO69</span> has been <span class="ev" style=" background: #2ecc71  !important;color:#fff; ">evaluated</span>
             </p>
