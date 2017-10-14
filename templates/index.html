@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
     <title>Simplex</title>
-    <link rel="stylesheet" href="css/app.css">
-    <script src="jquery.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+    <script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
 </head>
 
 <body>
@@ -60,7 +60,7 @@
     <section class="img_div">
         <div class="overlay"></div>
     </section>
-    <!-- 
+    <!--
   <section class="feature">Easytonav
   Loan applications made simple
   Income channelisation</section> -->
