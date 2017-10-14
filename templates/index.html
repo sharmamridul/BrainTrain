@@ -10,6 +10,17 @@
 </head>
 
 <body>
+	<div id="login_daemon">
+		<div class="centered">
+			<div class="login_box">
+				<form method="POST" action="{{ url_for('login') }}">
+					<input type="text" spellcheck ="false" placeholder="Username" name="username"><br>
+					<input type="password" placeholder="Password" name="password"><br>
+					<input type="submit" value="Login">
+				</form>
+			</div>
+		</div>
+	</div>
 	<section class="hero">
 		<div class="logo"></div>
 		<div class="left">
@@ -26,7 +37,7 @@
 				<br>
 				<br>
 				<p class="lead animated fadeIn">
-					<a href="#simple" class="button white bump-right">Check it out</a>
+					<a href="#0" class="button white bump-right" id = "login">Check it out</a>
 					<a href="#quote" class="button">read on</a>
 				</p>
 			</div>
@@ -161,6 +172,11 @@
 					});
 				}
 			}
+		});
+	</script>
+	<script>
+		$('#login').on('click', function(){
+			$('#login_daemon').addClass('show')
 		});
 	</script>
 </body>

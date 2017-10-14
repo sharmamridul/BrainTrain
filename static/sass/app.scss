@@ -38,6 +38,7 @@ body {
 
 body {
     font-family: Apercu;
+    overflow-x:hidden; 
 }
 
 h1,
@@ -284,6 +285,7 @@ a {
 
     to {
         opacity: 1;
+        display: block !important;
     }
 }
 
@@ -462,12 +464,63 @@ li {
 }
 
 .logo {
-	height: 50px;
-	width: 50px;
-	margin: 30px;
-	// 	right: 0;
-	// opacity: 0.8;
-	position: fixed;
-	background: url(final.png) center center no-repeat;
-	background-size: cover;
+    height: 50px;
+    width: 50px;
+    margin: 30px;
+    //  right: 0;
+    // opacity: 0.8;
+    position: fixed;
+    background: url(final.png) center center no-repeat;
+    background-size: cover;
+}
+
+#login_daemon{
+    display: none;
+    width: 100%;
+    z-index: 1;
+    background: rgba(#000,.8);
+    height: 100vh;
+    position: fixed;
+    .centered {
+        position: absolute;
+        top: 240px;
+        left: 500px; 
+        vertical-align: middle;
+        display: table-cell;
+        text-align: center; 
+        input[type="text"], input[type="password"] {
+            margin-bottom: 10px;
+            font-size: 1rem;
+            width: 283px;
+            padding: 15px 10px;
+            outline: none;
+            border: none;
+            // opacity: .6;
+            // border-radius: 5px;
+            font-family: monospace;
+        }
+    }
+}
+.show{
+    display: block !important;
+}
+input[type="submit"]{
+    outline: none;
+    border: none;
+    background: #00adef;
+    cursor: pointer;
+    position: relative;
+    font-size:0.877rem;
+    text-transform: uppercase;
+    padding: 15px 120px;
+    border-radius: 5px;
+    color: #fff;
+    font-family: monospace;
+    letter-spacing: 2px;
+    top: 0;
+    box-shadow: 0px 5px 0 darken(#00adef, 15);
+    &:focus {
+        top:4px;
+        box-shadow: 0px 1px 0 darken(#00adef, 15);
+    }
 }

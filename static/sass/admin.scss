@@ -187,7 +187,12 @@ hr {
     margin: 20px 10px;
     position: absolute;
     padding: 20px;
+    width: 300px;
     box-shadow: 0 0 1px rgba(0,0,0,.15);
+
+    &:hover {
+        box-shadow: 0 0 13px rgba(0,0,0,.15);
+    }
 }
 .two {
     margin: 20px 0px 20px 360px; 
@@ -199,4 +204,24 @@ hr {
 .cite {
     color: #666;
     font-style: italic;
+}
+
+.half_dabba {
+    height: 300px;
+    width: 34%;
+    box-shadow: 0 0 1px rgba(0,0,0,.15);
+    background: #fff;
+    margin: 140px 10px 10px 10px;
+    padding:25px;
+    h1, h3 {
+        letter-spacing: -.2px;
+        font-family: Apercu;
+    }
+    h1 {
+        font-size: 1.22rem;
+    }
+    h3 {
+        font-size: 1rem;
+        color: #888;
+    }
 }
