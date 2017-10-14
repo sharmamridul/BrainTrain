@@ -13,9 +13,11 @@ def index():
 
 @app.route("/login", methods=['GET', 'POST'])
 def login():
+	print('login')
 	session.pop('user', None)
-	user = db['users'].find_one({'username': request.args.get('username')})
-	if user != None and user['password'] == request.args.get('password'):
+	user = db['users'].find_one({'username': request.form['username']})
+	print(user)
+	if user != None and user['password'] == request.form['password']:
 		session['user'] = user
 		return redirect(url_for('panel'))
 	return redirect(url_for('index'))
