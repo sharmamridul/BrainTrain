@@ -161,10 +161,14 @@ hr {
   margin: 20px 10px;
   position: absolute;
   padding: 20px;
+  width: 300px;
   -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.15); }
   .dabba_reports h1 {
     font-size: 2.5rem; }
+  .dabba_reports:hover {
+    -webkit-box-shadow: 0 0 13px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 13px rgba(0, 0, 0, 0.15); }
 
 .two {
   margin: 20px 0px 20px 360px;
@@ -176,3 +180,20 @@ hr {
 .cite {
   color: #666;
   font-style: italic; }
+
+.half_dabba {
+  height: 300px;
+  width: 34%;
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+  background: #fff;
+  margin: 140px 10px 10px 10px;
+  padding: 25px; }
+  .half_dabba h1, .half_dabba h3 {
+    letter-spacing: -.2px;
+    font-family: Apercu; }
+  .half_dabba h1 {
+    font-size: 1.22rem; }
+  .half_dabba h3 {
+    font-size: 1rem;
+    color: #888; }
