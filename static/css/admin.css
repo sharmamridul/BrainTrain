@@ -182,8 +182,8 @@ hr {
   font-style: italic; }
 
 .half_dabba {
-  height: 300px;
-  width: 34%;
+  height: auto;
+  width: auto;
   -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
   background: #fff;

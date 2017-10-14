@@ -25,36 +25,36 @@
         <div class="main_nav">
             <ul>
                 <li><a href="#0">My Profile</a></li>
-                <li><a href="#0">Medical Treatment</a></li>
+                <!-- <li><a href="#0">Medical Treatment</a></li>
                 <li><a href="#0">Recent Appointments</a></li>
-                <li><a href="#0">Reports</a></li>
+                 --><li><a href="#0">Reports</a></li>
                 <li><a href="{{ url_for('logout') }}">Logout</a></li>
             </ul>
         </div>
         <hr>
         <div class="buttons">
-            <a href="#0" class="req">Request Report</a>
+            <a href="{{ url_for('static', filename=user.filename) }}" target="_blank" class="req">Request Report</a>
             <br>
             <br>
             <br>
             <br>
-            <a href="#0" class="req line">Submit diagnosis</a>
+            <a href="{{ url_for('downloaddata') }}" class="req line">Download Data</a>
         </div>
     </nav>
     <div class="main_dash">
         <div class="greet">
             <h1>Hey there, {{ user.name }}</h1>
             <p class="lead">
-                Your recent report, <span class="recent">#PP_LMAO69</span> has been <span class="ev" style=" background: #2ecc71  !important;color:#fff; ">evaluated</span>
+                Your recent report, <span class="recent">#PP_LMAO69</span> has been <span class="ev" style=" background: #2ecc71  !important;color:#fff; ">evaluated.</span>
             </p>
         </div>
         <div class="dabba_reports">
             <h1>124</h1>
             <p class="lead">
                 Reports evaluated
-                <span class="cite">13 new unread</span>
+                <span class="cite">10 new available</span>
             </p>
-        </div>
+        </div><!--
         <div class="dabba_reports two">
             <h1>2</h1>
             <p class="lead">
@@ -68,10 +68,11 @@
                 Therapy cost
                 <span class="cite">due tomorrow</span>
             </p>
-        </div>
+        </div> -->
         <div class="half_dabba">
             <h1>Weekly Statistics</h1>
-            <h3>Calculated daily</h3>
+            <h3>Calculated for last 10 days</h3>
+            <img src="{{ url_for('static', filename=user.filename) }}">
         </div>
     </div>
 </body>
